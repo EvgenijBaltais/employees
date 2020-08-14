@@ -1,0 +1,648 @@
+@font-face {
+    font-family: 'Robotoblack';
+    src: url('../fonts/Roboto/Roboto-Black.ttf');
+}
+@font-face {
+    font-family: 'Robotobold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Robotolight';
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Robotomedium';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'Robotoregular';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Robotothin';
+    src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Robotoregular', tahoma, verdana, sans-serif;
+}
+
+/* Модификаторы */
+
+.grey-block {
+    background: #F1F3F6;
+}
+
+/* Моификаторы */
+
+.employee {
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.s-top {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    background: #22215B;
+}
+
+.s-wrapper {
+    width: 100%;
+    display: flex;
+    height: calc(100% - 90px);
+    overflow: hidden;
+}
+
+.width-1 {
+    width: 315px;
+}
+.width-2 {
+    width: calc(100% - 715px);
+}
+.width-3 {
+    width: 400px;
+}
+
+.padding-bottom-5 {
+    padding-bottom: 5px;
+}
+
+.bold-font {
+    font-family: 'Robotobold';
+}
+.medium-font {
+    font-family: 'Robotomedium';
+}
+.thin-font {
+    font-family: 'Robotothin';
+}
+.s-working {
+    background: #4CE364;
+}
+.s-weekend {
+    background: #F45656;
+}
+
+.border-grey-top {
+    border-top: 1px solid #D4D4D4;
+}
+
+.s-left {
+    position: relative;
+    padding: 0 0 50px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.s-left-wrap {
+    height: 100%;
+    overflow: auto;
+    scrollbar-color: #AEB3C9 #DCDFEB;
+    scrollbar-width: thin;
+}
+
+.s-left-wrap::-webkit-scrollbar {
+    width: 10px;
+    background-color: #DCDFEB;
+}
+
+.s-left-wrap::-webkit-scrollbar-thumb {
+    background-color: #AEB3C9;
+    border-radius: 7px;
+}
+.s-left-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: #AEB3C9;
+}
+
+.s-right {
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    overflow: auto;
+    scrollbar-color: #AEB3C9 #DCDFEB;
+    scrollbar-width: thin;
+}
+
+.s-right-wrap {
+    padding: 0 45px;
+}
+
+.s-right::-webkit-scrollbar {
+    width: 10px;
+    background-color: #DCDFEB;
+}
+
+.s-right::-webkit-scrollbar-thumb {
+    background-color: #AEB3C9;
+    border-radius: 7px;
+}
+.s-right::-webkit-scrollbar-thumb:hover {
+    background-color: #AEB3C9;
+}
+
+.get-this-login {
+    text-align: right;
+}
+
+.get-this-login-link {
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #7F8FA6;
+    border-bottom: 1px dashed #7F8FA6;
+}
+
+.s-logo-block {
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s-logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+}
+
+.s-search-block {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s-common-info {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.s-common-info-block {
+    width: 20%;
+    padding: 0 10px 0 0;
+    align-items: flex-start;
+}
+
+.s-info-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+}
+
+.s-input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px 5px 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    color: #000;
+    font-size: 16px;
+}
+
+.s-input::-webkit-placeholder  {font-size: 20px;color:#D6D6D6;} 
+.s-input::-moz-placeholder     {font-size: 20px;color:#D6D6D6;} 
+.s-input:-moz-placeholder      {font-size: 20px;color:#D6D6D6;} 
+.s-input:-ms-input-placeholder {font-size: 20px;color:#D6D6D6;} 
+
+
+/* Табы в левом блоке */
+
+.s-tab {
+    cursor: pointer;
+}
+
+.s-tab-hr {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+    right: 10px;
+    border: 0;
+    outline: 0;
+    height: 1px;
+    background: #D7E4F8;
+}
+
+.s-tab-header {
+    display: block;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    color: #415EB6;
+    font-size: 11px;
+    transition: background .2s;
+}
+
+.s-tab-content {
+    display: none;
+    padding: 10px 10px 10px 20px;
+    box-sizing: border-box;
+}
+.s-tab-title {
+    color: #22215B;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    transition: color .2s;
+}
+
+.s-tab-show .s-tab-content {
+    display: block;
+}
+
+.s-tab-header:hover {
+    transition: background .2s;
+    background: #567DF4;
+}
+
+.s-tab-header:hover .s-tab-title {
+    transition: color .2s;
+    color: #fff;
+}
+
+.s-tab-header:hover .show-hide-text {
+    transition: color .2s;
+    color: #fff;
+}
+
+.s-tab-show-hide {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.plus-svg {
+    display: block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.s-tab-item-label {
+    
+}
+
+.s-tab-item {
+    padding: 4px 0;
+}
+
+/* Стилизация радиокнопки */
+
+.s-tab-item {
+    position: relative;
+}
+.radio_input {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.radio_label {
+    margin-left: 25px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    line-height: 20px;
+}
+.radio_label:hover {
+    border-bottom: 1px dashed #000;
+}
+.radio_label:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute; 
+    top: 5px;
+    left: 0;
+    z-index: 1;
+    transition: border .1s linear;
+}
+.radio_label:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #567DF4;
+    border-radius: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+.radio_input:checked + .radio_label:before {
+    border-color: #E0E8FF;
+}
+.radio_input:checked + .radio_label:after {
+    opacity: 1;
+}
+
+/* Стилизация радиокнопки */
+
+/* Табы в левом блоке, конец */
+
+.reset-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    color: #fff;
+    background-color: #567DF4;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Центральный блок */
+
+.s-center {
+    background: #fff;
+    overflow: auto;
+    scrollbar-color: #AEB3C9 #DCDFEB;     /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: thin;  /* толщина */
+}
+
+/* полоса прокрутки (скроллбар) */
+.s-center::-webkit-scrollbar {
+    width: 10px;
+    background-color: #DCDFEB;
+}
+/* ползунок скроллбара */
+.s-center::-webkit-scrollbar-thumb {
+    background-color: #AEB3C9;
+    border-radius: 7px;
+}
+.s-center::-webkit-scrollbar-thumb:hover {
+    background-color: #AEB3C9;
+}
+
+.s-center-wrap {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.s-center-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.s-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0; 
+}
+
+/* Центральный блок, конец */
+
+/* Карточка */
+
+.employee-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(50% - 7px);
+    padding: 15px 15px 20px 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.employee-card:hover {
+    transition: background .2s;
+    background: #EEF7FE;
+}
+.employee-card:hover .s-login {
+    transition: color .2s;
+    color: #415EB6;
+}
+.employee-card:hover .s-role-name {
+    transition: color .2s;
+    color: #415EB6;
+}
+.employee-card:hover .manager-pic-info {
+    transition: background .2s;
+    background: #415EB6;
+}
+
+.employee-card:hover:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 8px solid #567DF4;
+    border-bottom: 10px solid transparent;
+}
+
+.manager-pic {
+    position: relative;
+    text-align: center;
+    width: 70px;
+    height: 71px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.manager-pic-info {
+    display: inline-block;
+    margin-top: 62px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 5px;
+    background-color: #FFB110;
+    padding: 2px 4px;
+}
+.manager-info {
+    flex-grow: 1;
+    padding: 0 30px 0 15px;
+    box-sizing: border-box;
+}
+
+.s-rewards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    padding: 10px 0 0 0;
+}
+
+.s-reward-pic {
+    width: 22px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.manager-phone-info {
+    width: 120px;
+}
+.s-full-name {
+    border-bottom: 1px solid #D4D4D4;
+}
+.s-status {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.s-status-wrap {
+    text-align: right;
+}
+.s-additional {
+    text-align: right;
+}
+.department-type {
+    text-align: right;
+    font-size: 14px;
+    line-height: 20px;
+}
+.s-login {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+.s-full-name {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 3px;
+}
+.s-role {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.employee-card-rop {
+    background: #FFFBEC;
+}
+
+.employee-card-rop .s-login {
+    color: #FFFBEC;
+}
+
+.employee-card-rop .s-role-name {
+    color: #FFB110;
+}
+
+.employee-card-rop .s-login {
+    color: #FFB110;
+}
+
+/* Карточка, конец */
+
+.add-more-pics {
+    text-align: center;
+    padding: 10px 0 0 0;
+    box-sizing: border-box;
+}
+
+.add-more-pics-link {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/more.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s-large-img {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    background-image: url('../img/m.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.large-phone-status {
+    text-align: center;
+    padding: 10px 0;
+}
+.s-status-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.s-large-status {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: #F45656;
+    border-radius: 50%;
+}
+.s-phone {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.large-login {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.large-full-name {
+    margin-bottom: 20px;
+}
+
+.large-full-phones {
+    display: inline-block;
+    text-align: right;
+}
+
+.large-working-time {
+    display: inline-block;
+    text-align: right;
+}
+
+.s-manager-email {
+    color: #000!important;
+    text-decoration: none;
+    border-bottom: 1px dashed #000;
+}
