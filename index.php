@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src = "js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -50,28 +51,66 @@
                                     <hr class = "s-tab-hr">
                                 </div>
                                 <div class="s-tab-content">
-                                    <form action="">
-                                        <div class="s-tab-item">
-                                            <input class="radio_input" name="employee-tab" type="radio" id="all-s" checked="checked">
-                                            <label class="radio_label" for="all-s">Все (<span class = "">320</span>)</label>
-                                        </div>
-                                        <div class="s-tab-item">
-                                            <input class="radio_input" name="employee-tab" type="radio" id="private-s">
-                                            <label class="radio_label" for="private-s">Частный отдел (<span class = "">6</span>)</label>
-                                        </div>
-                                        <div class="s-tab-item">
-                                            <input class="radio_input" name="employee-tab" type="radio" id="corp-s">
-                                            <label class="radio_label" for="corp-s">Корпоративный отдел (<span class = "">20</span>)</label>
-                                        </div>
-                                        <div class="s-tab-item">
-                                            <input class="radio_input" name="employee-tab" type="radio" id="consult-s">
-                                            <label class="radio_label" for="consult-s">Консультант (<span class = "">3</span>)</label>
-                                        </div>
-                                        <div class="s-tab-item">
-                                            <input class="radio_input" name="employee-tab" type="radio" id="account-s">
-                                            <label class="radio_label" for="account-s">Бухгалтерия (<span class = "">12</span>)</label>
-                                        </div>
-                                    </form>
+                                    <div class="s-tab-content-inside">
+                                        <form action="">
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="all-s" checked="checked">
+                                                <label class="radio_label" for="all-s">Все (<span class = "">320</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s">
+                                                <label class="radio_label" for="private-s">Частный отдел (<span class = "">6</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s">
+                                                <label class="radio_label" for="corp-s">Корпоративный отдел (<span class = "">20</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s">
+                                                <label class="radio_label" for="consult-s">Консультант (<span class = "">3</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s">
+                                                <label class="radio_label" for="account-s">Бухгалтерия (<span class = "">12</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s2">
+                                                <label class="radio_label" for="private-s2">Частный отдел (<span class = "">6</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s2">
+                                                <label class="radio_label" for="corp-s2">Корпоративный отдел (<span class = "">20</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s2">
+                                                <label class="radio_label" for="consult-s2">Консультант (<span class = "">3</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s1">
+                                                <label class="radio_label" for="account-s1">Бухгалтерия (<span class = "">12</span>)</label>
+                                            </div>
+                                                                                    <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s3">
+                                                <label class="radio_label" for="private-s3">Частный отдел (<span class = "">6</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s3">
+                                                <label class="radio_label" for="corp-s3">Корпоративный отдел (<span class = "">20</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s3">
+                                                <label class="radio_label" for="consult-s3">Консультант (<span class = "">3</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s2">
+                                                <label class="radio_label" for="account-s2">Бухгалтерия (<span class = "">12</span>)</label>
+                                            </div>
+                                            <div class="s-tab-item">
+                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s3">
+                                                <label class="radio_label" for="account-s3">Бухгалтерия (<span class = "">12</span>)</label>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 1ая вкладка, конец -->
@@ -89,7 +128,9 @@
                                         </p>
                                         <hr class = "s-tab-hr">
                                     </div>
-                                    <div class="s-tab-content"></div>
+                                    <div class="s-tab-content">
+                                        <div class="s-tab-content-inside"></div>
+                                    </div>
                                 </div>
                                 <!-- 2ая вкладка, конец -->
                                 <!-- 3ая вкладка -->
@@ -105,7 +146,9 @@
                                             </p>
                                             <hr class = "s-tab-hr">
                                         </div>
-                                        <div class="s-tab-content"></div>
+                                        <div class="s-tab-content">
+                                            <div class="s-tab-content-inside"></div>
+                                        </div>
                                     </div>
                                     <!-- 3ая вкладка, конец -->
                                     <!-- 4ая вкладка -->
@@ -121,7 +164,9 @@
                                                 </p>
                                                 <hr class = "s-tab-hr">
                                             </div>
-                                            <div class="s-tab-content"></div>
+                                            <div class="s-tab-content">
+                                                <div class="s-tab-content-inside"></div>
+                                            </div>
                                         </div>
                                         <!-- 4ая вкладка, конец -->
                                         <!-- 5ая вкладка -->
@@ -137,7 +182,9 @@
                                                     </p>
                                                     <hr class = "s-tab-hr">
                                                 </div>
-                                                <div class="s-tab-content"></div>
+                                                <div class="s-tab-content">
+                                                    <div class="s-tab-content-inside"></div>
+                                                </div>
                                             </div>
                                             <!-- 5ая вкладка, конец -->
                                             <!-- 6ая вкладка -->
@@ -153,7 +200,9 @@
                                                         </p>
                                                         <hr class = "s-tab-hr">
                                                     </div>
-                                                    <div class="s-tab-content"></div>
+                                                    <div class="s-tab-content">
+                                                        <div class="s-tab-content-inside"></div>
+                                                    </div>
                                                 </div>
                                                 <!-- 6ая вкладка, конец -->
                                                 <!-- 7ая вкладка -->
@@ -169,7 +218,9 @@
                                                             </p>
                                                             <hr class = "s-tab-hr">
                                                         </div>
-                                                        <div class="s-tab-content"></div>
+                                                        <div class="s-tab-content">
+                                                            <div class="s-tab-content-inside"></div>
+                                                        </div>
                                                     </div>
                                                     <!-- 7ая вкладка, конец -->
                                                     <!-- 8ая вкладка -->
@@ -185,7 +236,9 @@
                                                                 </p>
                                                                 <hr class = "s-tab-hr">
                                                             </div>
-                                                            <div class="s-tab-content"></div>
+                                                            <div class="s-tab-content">
+                                                                <div class="s-tab-content-inside"></div>
+                                                            </div>
                                                         </div>
                                                         <!-- 8ая вкладка, конец -->
                                                         <!-- 9ая вкладка -->
@@ -201,7 +254,9 @@
                                                                     </p>
                                                                     <hr class = "s-tab-hr">
                                                                 </div>
-                                                                <div class="s-tab-content"></div>
+                                                                <div class="s-tab-content">
+                                                                    <div class="s-tab-content-inside"></div>
+                                                                </div>
                                                             </div>
                                                             <!-- 9ая вкладка, конец -->
                                                         </div>
@@ -219,6 +274,12 @@
                                                             <h3 class="s-center-title">Частный отдел (6)</h3>
                                                             <div class="s-cards">
                                                                 <div class="employee-card employee-card-rop">
+                                                                    <div class="s-status-wrap">
+                                                                        <span class = "changing-text">Заменяет:</span>
+                                                                        <span class = "changing-manager">Елизавета (141)</span>
+                                                                        <span class = "changing-weekend">Выходной</span>
+                                                                        <div class="s-status s-working"></div>
+                                                                    </div>
                                                                     <div class="manager-pic" style = "background-image: url('img/m.jpg');">
                                                                         <div class="manager-pic-info">РОП</div>
                                                                     </div>
@@ -231,9 +292,6 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="manager-phone-info">
-                                                                        <div class="s-status-wrap">
-                                                                            <div class="s-status s-working"></div>
-                                                                        </div>
                                                                         <div class="s-additional">
                                                                             <p>Доб.: <span>109</span></p>
                                                                         </div>
@@ -322,7 +380,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="employee-card">
+                                                                <div class="employee-card employee-card-active">
                                                                     <div class="manager-pic" style = "background-image: url('img/m.jpg');">
                                                                         <div class="manager-pic-info">РОП</div>
                                                                     </div>
@@ -637,8 +695,8 @@
                                                                 <span>Выходной</span>
                                                             </div>
                                                             <div class="s-manager-change">
-                                                                <span>Заменяет:</span>
-                                                                <span>Елизавета (141)</span>
+                                                                <span><b>Заменяет:</b></span>
+                                                                <span class = "s-manager-change-name">Елизавета (141)</span>
                                                             </div>
                                                         </div>
 
@@ -678,15 +736,15 @@
                                                             </div>
 
                                                             <div class = "large-group padding-bottom-5">
-                                                                <span class = "medium-font">Группа: </span><span>1</span>
+                                                                <span class = "medium-font">Группа: </span><span class = "border-bottom-dashed">1</span>
                                                             </div>
 
                                                             <div class = "large-city padding-bottom-5">
-                                                                <span class = "medium-font">Город: </span><span>Москва</span>
+                                                                <span class = "medium-font">Город: </span><span class = "border-bottom-dashed">Москва</span>
                                                             </div>
 
                                                             <div class = "large-department">
-                                                                <span class = "medium-font">Отдел: </span><span>Частный отдел</span>
+                                                                <span class = "medium-font">Отдел: </span><span class = "border-bottom-dashed">Частный отдел</span>
                                                             </div>
 
                                                             <div class="s-rewards">

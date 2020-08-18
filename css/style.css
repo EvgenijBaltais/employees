@@ -43,6 +43,10 @@
     flex-wrap: wrap;
 }
 
+.border-bottom-dashed {
+    border-bottom: 1px dashed #000;
+}
+
 .s-top {
     display: flex;
     width: 100%;
@@ -61,10 +65,10 @@
     width: 315px;
 }
 .width-2 {
-    width: calc(100% - 715px);
+    width: calc(100% - 705px);
 }
 .width-3 {
-    width: 400px;
+    width: 390px;
 }
 
 .padding-bottom-5 {
@@ -128,7 +132,7 @@
 }
 
 .s-right-wrap {
-    padding: 0 45px;
+    padding: 0 20px 0 35px;
 }
 
 .s-right::-webkit-scrollbar {
@@ -190,6 +194,10 @@
     align-items: flex-start;
 }
 
+.s-common-info-block:first-child {
+    width: 25%;
+}
+
 .s-info-text {
     font-size: 16px;
     line-height: 25px;
@@ -220,6 +228,8 @@
 
 .s-tab {
     cursor: pointer;
+    background: #F1F3F6;
+    z-index: 5
 }
 
 .s-tab-hr {
@@ -242,23 +252,44 @@
     color: #415EB6;
     font-size: 11px;
     transition: background .2s;
+    user-select: none;
+    background: #F1F3F6;
+    z-index: 9;
+}
+
+.s-tab-header > * {
+    user-select: none;
+}
+
+.s-tab-content-inside {
+    padding: 10px 0;
 }
 
 .s-tab-content {
-    display: none;
-    padding: 10px 10px 10px 20px;
+    padding: 0 10px 0 20px;
     box-sizing: border-box;
-}
-.s-tab-title {
-    color: #22215B;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: bold;
-    transition: color .2s;
+    background: #F1F3F6;
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
 }
 
 .s-tab-show .s-tab-content {
-    display: block;
+    height: auto;
+    transition: height .3s;
+}
+
+.s-tab-show .plus-svg {
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.s-tab-title {
+    color: #22215B;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: bold;
+    transition: color .2s;
 }
 
 .s-tab-header:hover {
@@ -280,6 +311,7 @@
     position: absolute;
     right: 10px;
     bottom: 5px;
+    padding-top: 10px;
     padding-right: 10px;
     box-sizing: border-box;
 }
@@ -289,8 +321,9 @@
     width: 7px;
     height: 7px;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
+    transition: transform .3s;
 }
 
 .s-tab-item-label {
@@ -298,7 +331,7 @@
 }
 
 .s-tab-item {
-    padding: 4px 0;
+    padding: 3px 0;
 }
 
 /* Стилизация радиокнопки */
@@ -318,6 +351,10 @@
     user-select: none;
     font-size: 16px;
     line-height: 20px;
+    font-family: 'Robotolight';
+}
+.radio_label span {
+    font-family: 'Robotolight';
 }
 .radio_label:hover {
     border-bottom: 1px dashed #000;
@@ -325,8 +362,8 @@
 .radio_label:before {
     content: "";
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
     -moz-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
@@ -347,8 +384,8 @@
     border-radius: 3px;
     opacity: 0;
     position: absolute;
-    top: 8px;
-    left: 3px;
+    top: 9px;
+    left: 4px;
     z-index: 2;
     transition: opacity .1s linear;
 }
@@ -428,6 +465,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-between;
     width: calc(50% - 7px);
     padding: 15px 15px 20px 15px;
@@ -457,6 +495,15 @@
     transition: background .2s;
     background: #415EB6;
 }
+.employee-card:hover .changing-text {
+    color: #000;
+}
+.employee-card:hover .changing-manager {
+    color: #000;
+}
+.employee-card:hover .changing-weekend {
+    color: #000;
+}
 
 .employee-card:hover:after {
     content: "";
@@ -472,6 +519,51 @@
     border-right: 8px solid #567DF4;
     border-bottom: 10px solid transparent;
 }
+
+/* Активный класс */
+
+.employee-card-active {
+    transition: background .2s;
+    background: #EEF7FE;
+}
+.employee-card-active .s-login {
+    transition: color .2s;
+    color: #415EB6;
+}
+.employee-card-active .s-role-name {
+    transition: color .2s;
+    color: #415EB6;
+}
+.employee-card-active .manager-pic-info {
+    transition: background .2s;
+    background: #415EB6;
+}
+.employee-card-active .changing-text {
+    color: #000;
+}
+.employee-card-active .changing-manager {
+    color: #000;
+}
+.employee-card-active .changing-weekend {
+    color: #000;
+}
+
+.employee-card-active:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 8px solid #567DF4;
+    border-bottom: 10px solid transparent;
+}
+
+/* Активный класс, конец */
 
 .manager-pic {
     position: relative;
@@ -527,10 +619,38 @@
     border-radius: 50%;
 }
 .s-status-wrap {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     text-align: right;
+}
+.changing-text {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 5px;
+    color: #F45656;
+}
+.changing-manager {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 5px;
+    color: #F45656;
+}
+.changing-weekend {
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 5px;
+    color: #F45656;
 }
 .s-additional {
     text-align: right;
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 5px;
 }
 .department-type {
     text-align: right;
@@ -539,7 +659,7 @@
 }
 .s-login {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
 }
 .s-full-name {
@@ -553,6 +673,11 @@
     justify-content: space-between;
     font-size: 14px;
     line-height: 20px;
+}
+
+.s-role-name {
+    padding-right: 10px;
+    box-sizing: border-box;
 }
 
 .employee-card-rop {
@@ -605,44 +730,113 @@
 .s-status-block {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 15px 0 5px 0;
 }
 .s-large-status {
     display: inline-block;
     vertical-align: middle;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
     background: #F45656;
     border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
 }
 .s-phone {
     display: inline-block;
     vertical-align: middle;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .large-login {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 36px;
+    line-height: 42px;
     font-weight: bold;
 }
 
+.s-day-off {
+    font-size: 16px;
+    line-height: 20px;
+    color: #F45656;
+}
+
+.s-manager-change {
+    font-size: 16px;
+    line-height: 20px;
+    color: #F45656;
+}
+
+.s-manager-change-name {
+    border-bottom: 1px dashed #F45656;
+}
+
 .large-full-name {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .large-full-phones {
     display: inline-block;
     text-align: right;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .large-working-time {
     display: inline-block;
     text-align: right;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .s-manager-email {
     color: #000!important;
     text-decoration: none;
     border-bottom: 1px dashed #000;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@media only screen and (max-width: 1800px) {
+
+    .width-1 {
+        width: 300px;
+    }
+    .width-2 {
+        width: calc(100% - 670px);
+    }
+    .width-3 {
+        width: 370px;
+    }
+
+    .manager-info {
+        width: calc(100% - 180px);
+        padding: 0 10px 0 10px;
+    }
+    .manager-phone-info {
+        width: 110px;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+
+    .s-left.width-1 {
+        width: 80px;
+    }
+    .width-2 {
+        width: calc(100% - 360px);
+    }
+    .width-3 {
+        width: 280px;
+    }
+
+    .manager-info {
+        width: calc(100% - 180px);
+        padding: 0 10px 0 10px;
+    }
+    .manager-phone-info {
+        width: 110px;
+    }
 }
