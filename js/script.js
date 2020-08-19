@@ -86,28 +86,44 @@ if (document.querySelectorAll('.radio_input').length > 0) {
 
 			if (category == 0) return false;
 
+			// Скрытие всех карточек
+
 			for (let i = 0; i < cards.length; i++) {
 				cards[i].style.display = "none"
 			}
 
 			let radios = findParent(this, 's-tab-content-inside').querySelectorAll('.radio_input')
 
+			let selectedValues = []
+
 			for (let i = 0; i < radios.length; i++) {
 
 				if (radios[i].checked) {
 
-					let categoryCards = document.querySelectorAll('.employee-card');
+					selectedValues.push(findParent(radios[i], 's-tab-item').getAttribute('data-category'))
+
+					/*let categoryCards = document.querySelectorAll('.employee-card');
 
 					for (let i = 0; i < categoryCards.length; i++) {
 
-						console.log(findParent(radios[i], 's-tab-item').getAttribute('data-category'))
-
 						if (categoryCards[i].getAttribute('data-category') == findParent(radios[i], 's-tab-item').getAttribute('data-category')) {
+
+							console.log(categoryCards[i].getAttribute('data-category'))
+
 							categoryCards[i].style.display = "flex"
 						}
-					}
+					}*/
 				}
 			}
+
+			let categoryCards = document.querySelectorAll('.employee-card');
+
+			for (let i = 0; i < categoryCards.length; i++) {
+
+				
+			}
+
+			console.log(selectedValues)
 		})
 	}
 }
@@ -134,17 +150,17 @@ if (document.querySelector('.reset-filters')) {
 
 		document.querySelectorAll('.radio_input')[i].addEventListener('change', function(){
 
-				if (i == 0) {
-					for (let i = 1; i < document.querySelectorAll('.radio_input').length; i++) {
-						document.querySelectorAll('.radio_input')[i].checked = false
-					}
-					for (let i = 0; i < document.querySelectorAll('.employee-card').length; i++) {
-						document.querySelectorAll('.employee-card')[i].style.display = "flex"
-					}
+			if (i == 0) {
+				for (let i = 1; i < document.querySelectorAll('.radio_input').length; i++) {
+					document.querySelectorAll('.radio_input')[i].checked = false
 				}
-				else {
-					document.querySelectorAll('.radio_input')[0].checked = false
+				for (let i = 0; i < document.querySelectorAll('.employee-card').length; i++) {
+					document.querySelectorAll('.employee-card')[i].style.display = "flex"
 				}
+			}
+			else {
+				document.querySelectorAll('.radio_input')[0].checked = false
+			}
 		})
 	}
 
