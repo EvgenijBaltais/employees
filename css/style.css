@@ -28,6 +28,15 @@
     font-family: 'Robotoregular', tahoma, verdana, sans-serif;
 }
 
+/*
+body {
+    height: 100vh;
+}
+.all-employees {
+    height: 100%;
+}
+*/
+
 /* Модификаторы */
 
 .grey-block {
@@ -200,6 +209,7 @@
     text-decoration: none;
     color: #7F8FA6;
     border-bottom: 1px dashed #7F8FA6;
+    cursor: pointer;
 }
 
 .s-logo-block {
@@ -217,6 +227,7 @@
 }
 
 .s-search-block {
+    position: relative;
     width: 580px;
     display: flex;
     flex-direction: column;
@@ -250,7 +261,7 @@
     display: block;
     width: 100%;
     height: 50px;
-    padding: 5px 10px 5px 20px;
+    padding: 5px 40px 5px 20px;
     box-sizing: border-box;
     background: #fff;
     border-radius: 10px;
@@ -258,6 +269,17 @@
     border: 0;
     color: #000;
     font-size: 16px;
+}
+
+.search-icon-input {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
 }
 
 .s-input::-webkit-placeholder  {font-size: 20px;color:#D6D6D6;} 
@@ -356,9 +378,10 @@
 .s-tab-show-hide {
     position: absolute;
     right: 10px;
-    bottom: 5px;
-    padding-top: 10px;
+    bottom: 0;
+    padding-top: 12px;
     padding-right: 10px;
+    padding-bottom: 5px;
     box-sizing: border-box;
 }
 
@@ -367,7 +390,7 @@
     width: 7px;
     height: 7px;
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 0;
     transition: transform .3s;
 }
@@ -1138,5 +1161,9 @@
 .radio_label {
     font-size: 14px;
     line-height: 18px;
+}
+.s-status {
+    width: 12px;
+    height: 12px;
 }
 }

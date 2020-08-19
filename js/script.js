@@ -7,9 +7,7 @@ if (document.querySelectorAll('.employee-card').length > 0) {
 let employee = document.querySelectorAll('.employee-card')
 
 	for (let i = 0; i < employee.length; i++) {
-
 		employee[i].addEventListener('click', function(){
-
 			for (let i = 0; i < employee.length; i++) {
 				employee[i].classList.remove('employee-card-active')
 			}
@@ -37,7 +35,6 @@ if (document.querySelectorAll('.s-tab-show-hide').length > 0) {
 				let parent = findParent(this, 's-tab');
 
 					if (parent.classList.contains('s-tab-show')) {
-						
 						parent.classList.remove('s-tab-show')
 						parent.querySelector('.s-tab-content').style.height = 0;
 						parent.querySelector('.show-hide-text').innerText = 'Показать'
@@ -74,13 +71,86 @@ if (document.querySelectorAll('.s-tab-show-hide').length > 0) {
 		})
 	}
 
-// 
+// Выбор активного пункта
 
-//document.querys-tab-item
+if (document.querySelectorAll('.radio_input').length > 0) {
+
+	let radioInput = document.querySelectorAll('.radio_input'),
+		cards = document.querySelectorAll('.employee-card');
+
+	for (let i = 0; i < radioInput.length; i++) {
+
+		radioInput[i].addEventListener('change', function(){
+
+			let category = findParent(this, 's-tab-item').getAttribute('data-category')
+
+			if (category == 0) return false;
+
+			for (let i = 0; i < cards.length; i++) {
+				cards[i].style.display = "none"
+			}
+
+			let radios = findParent(this, 's-tab-content-inside').querySelectorAll('.radio_input')
+
+			for (let i = 0; i < radios.length; i++) {
+
+				if (radios[i].checked) {
+
+					let categoryCards = document.querySelectorAll('.employee-card');
+
+					for (let i = 0; i < categoryCards.length; i++) {
+
+						console.log(findParent(radios[i], 's-tab-item').getAttribute('data-category'))
+
+						if (categoryCards[i].getAttribute('data-category') == findParent(radios[i], 's-tab-item').getAttribute('data-category')) {
+							categoryCards[i].style.display = "flex"
+						}
+					}
+				}
+			}
+		})
+	}
+}
+
+// Сброс по кнопке Сбросить фильтр
+
+if (document.querySelector('.reset-filters')) {
+
+	document.querySelector('.reset-filters').addEventListener('click', function(){
+
+		for (let i = 0; i < document.querySelectorAll('.employee-card').length; i++) {
+			document.querySelectorAll('.employee-card')[i].style.display = "flex"
+		}
+		for (let i = 1; i < document.querySelectorAll('.radio_input').length; i++) {
+			document.querySelectorAll('.radio_input')[i].checked = false
+		}
+		document.querySelectorAll('.radio_input')[0].checked = true
+	})
+}
+
+// Радиокнопки - Все и остальные
+
+	for (let i = 0; i < document.querySelectorAll('.radio_input').length; i++) {
+
+		document.querySelectorAll('.radio_input')[i].addEventListener('change', function(){
+
+				if (i == 0) {
+					for (let i = 1; i < document.querySelectorAll('.radio_input').length; i++) {
+						document.querySelectorAll('.radio_input')[i].checked = false
+					}
+					for (let i = 0; i < document.querySelectorAll('.employee-card').length; i++) {
+						document.querySelectorAll('.employee-card')[i].style.display = "flex"
+					}
+				}
+				else {
+					document.querySelectorAll('.radio_input')[0].checked = false
+				}
+		})
+	}
 
 // Родитель элемента
 
-function findParent (el, cls) {
+function findParent(el, cls) {
 	while ((el = el.parentElement) && !el.classList.contains(cls));
 	return el;
 }
