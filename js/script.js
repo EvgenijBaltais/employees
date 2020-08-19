@@ -22,9 +22,11 @@ let employee = document.querySelectorAll('.employee-card')
 
 if (document.querySelectorAll('.s-tab-show-hide').length > 0) {
 
-	// Задать высоту первому открытому блоку, чтобы не было дергающейся анимации
+	// Задать высоту первому открытому блоку - костыль, чтобы не было дергающейся анимации
 
-	document.querySelector('.s-tab-content').style.height = document.querySelector('.s-tab-content').scrollHeight + 'px';
+	if (window.screen.width >= 1800) {
+		document.querySelector('.s-tab-content').style.height = document.querySelector('.s-tab-content').scrollHeight + 'px';
+	}
 
 	let showHide = document.querySelectorAll('.s-tab-show-hide')
 
@@ -49,7 +51,32 @@ if (document.querySelectorAll('.s-tab-show-hide').length > 0) {
 		}
 }
 
+// Открытие меню
+	
+	if (document.querySelector('.mini-left-block')) {
 
+		document.querySelector('.mini-left-block').addEventListener('click', function(){
+
+			if (document.querySelector('.s-wrapper').classList.contains('opened-menu')) {
+				document.querySelector('.s-wrapper').classList.remove('opened-menu')
+				this.querySelector('.show-filter').innerText = "Открыть"
+			}
+			else {
+				document.querySelector('.s-wrapper').classList.add('opened-menu')
+				this.querySelector('.show-filter').innerText = "Скрыть"
+
+				// Задать высоту первому открытому блоку - костыль, чтобы не было дергающейся анимации
+
+				if (window.screen.width <= 1800 && !document.querySelector('.s-tab-content').style.height) {
+					document.querySelector('.s-tab-content').style.height = document.querySelector('.s-tab-content').scrollHeight + 'px';
+				}
+			}
+		})
+	}
+
+// 
+
+//document.querys-tab-item
 
 // Родитель элемента
 

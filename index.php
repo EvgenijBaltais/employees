@@ -8,9 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
     <div class="employee">
-
         <div class="s-top">
             <div class = "s-logo-block width-1">
                 <span class = "s-logo">Сотрудники</span>
@@ -32,9 +30,51 @@
                 </div>
             </div>
         </div>
-
         <div class="s-wrapper">
             <div class = "s-left width-1 grey-block">
+            <div class="mini-left-block">
+                <div class="mini-arrow-block">
+                    <img src="img/arrow-right.svg" alt="" class = "mini-arrow-block-pic">
+                    <span class = "show-filter">Открыть</span>
+                    <span class = "show-filter">фильтр</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Отдел</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Группа</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Город</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Онлайн</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Выходной</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Офис</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Отдел</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Награды</span>
+                </div>
+                <div class = "mini-left-title">
+                    <span class = "mini-left-title-number">(100)</span>
+                    <span>Новенькие</span>
+                </div>
+            </div>
                 <div class = "s-left-wrap">
                     <div class="s-tabs">
                         <!-- 1ая вкладка -->
@@ -53,60 +93,60 @@
                                 <div class="s-tab-content">
                                     <div class="s-tab-content-inside">
                                         <form action="">
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="all-s" checked="checked">
+                                            <div class="s-tab-item" data-category = "0">
+                                                <input class="radio_input" name="employee-tab1" type="radio" id="all-s" checked="checked">
                                                 <label class="radio_label" for="all-s">Все (<span class = "">320</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s">
+                                            <div class="s-tab-item" data-category = "1">
+                                                <input class="radio_input" name="employee-tab2" type="radio" id="private-s">
                                                 <label class="radio_label" for="private-s">Частный отдел (<span class = "">6</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s">
+                                            <div class="s-tab-item" data-category = "2">
+                                                <input class="radio_input" name="employee-tab3" type="radio" id="corp-s">
                                                 <label class="radio_label" for="corp-s">Корпоративный отдел (<span class = "">20</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s">
+                                            <div class="s-tab-item" data-category = "3">
+                                                <input class="radio_input" name="employee-tab4" type="radio" id="consult-s">
                                                 <label class="radio_label" for="consult-s">Консультант (<span class = "">3</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s">
+                                            <div class="s-tab-item" data-category = "4">
+                                                <input class="radio_input" name="employee-tab5" type="radio" id="account-s">
                                                 <label class="radio_label" for="account-s">Бухгалтерия (<span class = "">12</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s2">
+                                            <div class="s-tab-item" data-category = "5">
+                                                <input class="radio_input" name="employee-tab6" type="radio" id="private-s2">
                                                 <label class="radio_label" for="private-s2">Частный отдел (<span class = "">6</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s2">
+                                            <div class="s-tab-item" data-category = "6">
+                                                <input class="radio_input" name="employee-tab7" type="radio" id="corp-s2">
                                                 <label class="radio_label" for="corp-s2">Корпоративный отдел (<span class = "">20</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s2">
+                                            <div class="s-tab-item" data-category = "7">
+                                                <input class="radio_input" name="employee-tab8" type="radio" id="consult-s2">
                                                 <label class="radio_label" for="consult-s2">Консультант (<span class = "">3</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s1">
+                                            <div class="s-tab-item" data-category = "8">
+                                                <input class="radio_input" name="employee-tab9" type="radio" id="account-s1">
                                                 <label class="radio_label" for="account-s1">Бухгалтерия (<span class = "">12</span>)</label>
                                             </div>
-                                                                                    <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="private-s3">
+                                            <div class="s-tab-item" data-category = "9">
+                                                <input class="radio_input" name="employee-tab10" type="radio" id="private-s3">
                                                 <label class="radio_label" for="private-s3">Частный отдел (<span class = "">6</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="corp-s3">
+                                            <div class="s-tab-item" data-category = "10">
+                                                <input class="radio_input" name="employee-tab11" type="radio" id="corp-s3">
                                                 <label class="radio_label" for="corp-s3">Корпоративный отдел (<span class = "">20</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="consult-s3">
+                                            <div class="s-tab-item" data-category = "11">
+                                                <input class="radio_input" name="employee-tab12" type="radio" id="consult-s3">
                                                 <label class="radio_label" for="consult-s3">Консультант (<span class = "">3</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s2">
+                                            <div class="s-tab-item" data-category = "12">
+                                                <input class="radio_input" name="employee-tab13" type="radio" id="account-s2">
                                                 <label class="radio_label" for="account-s2">Бухгалтерия (<span class = "">12</span>)</label>
                                             </div>
-                                            <div class="s-tab-item">
-                                                <input class="radio_input" name="employee-tab" type="radio" id="account-s3">
+                                            <div class="s-tab-item" data-category = "13">
+                                                <input class="radio_input" name="employee-tab14" type="radio" id="account-s3">
                                                 <label class="radio_label" for="account-s3">Бухгалтерия (<span class = "">12</span>)</label>
                                             </div>
                                         </form>
@@ -364,7 +404,7 @@
                                                                         <div class = "s-login">Екатерина</div>
                                                                         <div class = "s-full-name">Чеботарева Екатерина Юрьевна</div>
                                                                         <div class = "s-role">
-                                                                            <span class ="s-role-name">Руководители отдела продаж</span>
+                                                                            <span class ="s-role-name bold-font">Руководители отдела продаж</span>
                                                                             <span class = "s-role-group">Группа 1</span>
                                                                         </div>
                                                                     </div>
@@ -474,40 +514,6 @@
                                                                     </div>
                                                                     <div class="manager-phone-info">
                                                                         <div class="s-status-wrap">
-                                                                            <div class="s-status s-working"></div>
-                                                                        </div>
-                                                                        <div class="s-additional">
-                                                                            <p>Доб.: <span>109</span></p>
-                                                                        </div>
-                                                                        <div class="department-type">
-                                                                            <span class = "bold-font">Частный отдел</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="employee-card"></div>
-                                                                <div class="employee-card"></div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Блок сотрудников -->
-
-                                                        <!-- Блок сотрудников -->
-                                                        <div class="department-section">
-                                                            <h3 class="s-center-title">Группа 1 (6)</h3>
-                                                            <div class="s-cards">
-                                                                <div class="employee-card">
-                                                                    <div class="manager-pic" style = "background-image: url('img/m.jpg');">
-                                                                        <div class="manager-pic-info">РОП</div>
-                                                                    </div>
-                                                                    <div class="manager-info">
-                                                                        <div class = "s-login">Екатерина</div>
-                                                                        <div class = "s-full-name">Чеботарева Екатерина Юрьевна</div>
-                                                                        <div class = "s-role">
-                                                                            <span class = "s-role-name bold-font">Руководители отдела продаж</span>
-                                                                            <span class = "s-role-group">Группа 1</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="manager-phone-info">
-                                                                        <div class="s-status-wrap">
                                                                             <div class="s-status s-weekend"></div>
                                                                         </div>
                                                                         <div class="s-additional">
@@ -518,76 +524,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="employee-card"></div>
-                                                                <div class="employee-card"></div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Блок сотрудников -->
-
-                                                        <!-- Блок сотрудников -->
-                                                        <div class="department-section">
-                                                            <h3 class="s-center-title">Группа 1 (6)</h3>
-                                                            <div class="s-cards">
-                                                                <div class="employee-card">
-                                                                    <div class="manager-pic" style = "background-image: url('img/m.jpg');">
-                                                                        <div class="manager-pic-info">РОП</div>
-                                                                    </div>
-                                                                    <div class="manager-info">
-                                                                        <div class = "s-login">Екатерина</div>
-                                                                        <div class = "s-full-name">Чеботарева Екатерина Юрьевна</div>
-                                                                        <div class = "s-role">
-                                                                            <span class = "s-role-name bold-font">Руководители отдела продаж</span>
-                                                                            <span class = "s-role-group">Группа 1</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="manager-phone-info">
-                                                                        <div class="s-status-wrap">
-                                                                            <div class="s-status s-working"></div>
-                                                                        </div>
-                                                                        <div class="s-additional">
-                                                                            <p>Доб.: <span>109</span></p>
-                                                                        </div>
-                                                                        <div class="department-type">
-                                                                            <span class = "bold-font">Частный отдел</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="employee-card"></div>
-                                                                <div class="employee-card"></div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Блок сотрудников -->
-
-                                                        <!-- Блок сотрудников -->
-                                                        <div class="department-section">
-                                                            <h3 class="s-center-title">Группа 1 (6)</h3>
-                                                            <div class="s-cards">
-                                                                <div class="employee-card">
-                                                                    <div class="manager-pic" style = "background-image: url('img/m.jpg');">
-                                                                        <div class="manager-pic-info">РОП</div>
-                                                                    </div>
-                                                                    <div class="manager-info">
-                                                                        <div class = "s-login">Екатерина</div>
-                                                                        <div class = "s-full-name">Чеботарева Екатерина Юрьевна</div>
-                                                                        <div class = "s-role">
-                                                                            <span class = "s-role-name bold-font">Руководители отдела продаж</span>
-                                                                            <span class = "s-role-group">Группа 1</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="manager-phone-info">
-                                                                        <div class="s-status-wrap">
-                                                                            <div class="s-status s-weekend"></div>
-                                                                        </div>
-                                                                        <div class="s-additional">
-                                                                            <p>Доб.: <span>109</span></p>
-                                                                        </div>
-                                                                        <div class="department-type">
-                                                                            <span class = "bold-font">Частный отдел</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="employee-card"></div>
-                                                                <div class="employee-card"></div>
                                                             </div>
                                                         </div>
                                                         <!-- Блок сотрудников -->
