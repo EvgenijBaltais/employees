@@ -92,6 +92,12 @@ if (document.querySelectorAll('.radio_input').length > 0) {
 				cards[i].style.display = "none"
 			}
 
+			// Скрытие всех заголовков карточек
+
+			for (let i = 0; i < document.querySelectorAll('.s-center-title').length; i++) {
+				document.querySelectorAll('.s-center-title')[i].style.display = "none"
+			}
+
 			let radios = findParent(this, 's-tab-content-inside').querySelectorAll('.radio_input')
 
 			let selectedValues = []
@@ -101,18 +107,6 @@ if (document.querySelectorAll('.radio_input').length > 0) {
 				if (radios[i].checked) {
 
 					selectedValues.push(findParent(radios[i], 's-tab-item').getAttribute('data-category'))
-
-					/*let categoryCards = document.querySelectorAll('.employee-card');
-
-					for (let i = 0; i < categoryCards.length; i++) {
-
-						if (categoryCards[i].getAttribute('data-category') == findParent(radios[i], 's-tab-item').getAttribute('data-category')) {
-
-							console.log(categoryCards[i].getAttribute('data-category'))
-
-							categoryCards[i].style.display = "flex"
-						}
-					}*/
 				}
 			}
 
@@ -120,10 +114,14 @@ if (document.querySelectorAll('.radio_input').length > 0) {
 
 			for (let i = 0; i < categoryCards.length; i++) {
 
-				
-			}
+				for (let j = 0; j < selectedValues.length; j++) {
 
-			console.log(selectedValues)
+					if (categoryCards[i].getAttribute('data-category') == selectedValues[j]) {
+						categoryCards[i].style.display = "flex"
+						findParent(categoryCards[i], 'department-section').querySelector('.s-center-title').style.display = "block"
+					}
+				}
+			}
 		})
 	}
 }
